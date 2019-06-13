@@ -5,6 +5,8 @@ class CreateOdds < ActiveRecord::Migration[5.2]
       t.integer :group2
       t.integer :group3
       t.integer :group4
+      t.integer :group5
+      t.integer :group6
     end
   end
 end

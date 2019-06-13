@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_13_042312) do
+ActiveRecord::Schema.define(version: 2019_06_13_045527) do
 
-  create_table "answers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "group_name"
+    t.integer "sum"
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.index ["reset_password_token"], name: "index_answers_on_reset_password_token", unique: true
+    t.index ["reset_password_token"], name: "index_groups_on_reset_password_token", unique: true
   end
 
   create_table "odds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -26,6 +27,17 @@ ActiveRecord::Schema.define(version: 2019_06_13_042312) do
     t.integer "group2"
     t.integer "group3"
     t.integer "group4"
+    t.integer "group5"
+    t.integer "group6"
+  end
+
+  create_table "scores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "question_number"
+    t.integer "bet"
+    t.integer "bet_team"
+    t.bigint "group_id"
+    t.integer "score"
+    t.index ["group_id"], name: "index_scores_on_group_id"
   end
 
 end

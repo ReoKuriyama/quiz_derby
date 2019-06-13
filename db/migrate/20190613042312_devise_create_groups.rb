@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
-class DeviseCreateAnswers < ActiveRecord::Migration[5.2]
+class DeviseCreateGroups < ActiveRecord::Migration[5.2]
   def change
-    create_table :answers do |t|
+    create_table :groups do |t|
       ## Database authenticatable
       t.string :group_name
+      t.integer :sum
       t.string :encrypted_password, null: false, default: ""
 
       ## Recoverable
@@ -34,7 +35,7 @@ class DeviseCreateAnswers < ActiveRecord::Migration[5.2]
 
     end
 
-    add_index :answers, :reset_password_token, unique: true
+    add_index :groups, :reset_password_token, unique: true
     # add_index :answers, :confirmation_token,   unique: true
     # add_index :answers, :unlock_token,         unique: true
   end
