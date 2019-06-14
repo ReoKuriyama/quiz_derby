@@ -1,0 +1,16 @@
+.question {
+  .title {
+    text-align: center;
+    font-size: 25px;
+  }
+}
+
+.group_select {
+  input[type="radio"] {
+    display: none;
+  }
+
+  input[type="submit"] {
+    display: block;
+  }
+}

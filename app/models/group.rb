@@ -2,11 +2,11 @@ class Group < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-    :recoverable, :rememberable, :validatable
+    :recoverable, :rememberable, :validatable, authentication_keys: [:group_name]
 
   has_many :scores
 
-  validates :group_name, uniqueness: true
+  validates :group_name, uniqueness: true, presence: true
 
   def self.calculate_all_sum
     Score.calculate_all_score

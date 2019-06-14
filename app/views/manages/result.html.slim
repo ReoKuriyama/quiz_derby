@@ -1,0 +1,9 @@
+.result_display
+  h1 結果発表
+
+  .results
+    - @groups.each do |group|
+      .result
+        ul.clearfix
+          li = group.group_name
+          li.score = group.sum.to_s + "点"

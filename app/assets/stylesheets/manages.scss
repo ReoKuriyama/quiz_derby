@@ -1,0 +1,20 @@
+.result_display {
+  h1 {
+    text-align: center;
+  }
+
+  .result {
+    height: 30px;
+    background-color: #e6e6fa;
+
+    li {
+      float: left;
+      display: inline-block;
+    }
+
+    .score {
+      margin-left: 20px;
+      color: red;
+    }
+  }
+}

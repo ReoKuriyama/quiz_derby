@@ -1,0 +1,39 @@
+.wrap {
+  padding: 20vh 5vw;
+  width: 90vw;
+  height: 60vh;
+
+  .title {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 35px;
+  }
+
+
+  .group_name {
+    label {
+      font-size: 25px;
+      padding-top: 30px;
+      display: block;
+      text-align: center;
+    }
+
+    input[type="text"] {
+      display: block;
+      width: 56vw;
+      margin: 20px auto 0;
+      font-size: 25px;
+      text-align: center;
+    }
+  }
+
+  .start_button {
+    padding: 50px 20px 20px;
+
+    input[type="submit"] {
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+}

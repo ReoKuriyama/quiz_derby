@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  color: white;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.orange {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f4810b;
+}
+
+.wrap_small {
+  padding: 10vh 5vw;
+  width: 90vw;
+  height: 80vh;
+}

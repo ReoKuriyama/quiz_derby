@@ -1,0 +1,25 @@
+.orange
+  .wrap_small
+    .question
+      h1.title
+        = @question.text
+
+    .group_select
+      = form_with model: @score do |form| 
+        = form.radio_button :bet_team, "1", id: 1
+        = form.label :bet_team, 'グループ1', for: 1
+        = form.radio_button :bet_team, "2", id: 2
+        = form.label :bet_team, "グループ2", for: 2
+        = form.radio_button :bet_team, "3", id: 3
+        = form.label :bet_team, "グループ3", for: 3
+        = form.radio_button :bet_team, "4", id: 4
+        = form.label :bet_team, "グループ4", for: 4
+        = form.radio_button :bet_team, "5", id: 5
+        = form.label :bet_team, "グループ5", for: 5
+        = form.radio_button :bet_team, "6", id: 6
+        = form.label :bet_team, "グループ6", for: 6
+
+        p 投入ポイント
+        = form.text_field :bet
+        = form.hidden_field :question_number
+        = form.submit :投票する
