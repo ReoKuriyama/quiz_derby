@@ -6,11 +6,67 @@
 }
 
 .group_select {
+  padding-top: 20px;
+
+  label {
+    display: inline-block;
+    padding: 14px;
+  }
+
   input[type="radio"] {
     display: none;
   }
 
   input[type="submit"] {
     display: block;
+    box-shadow: #f2f52e 0px 0px 2px 0px;
+    margin: 0 auto;
+    margin-top:20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
   }
+
+  .btn-square-shadow {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #f9f754;/*ボタン色*/
+    color: #6f6f1f;
+    border-bottom: solid 4px #eff1de;
+    border-radius: 3px;
+  }
+  .btn-square-shadow:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+  }
+
+  .btn-square-shadow.selected {
+    color: black;
+    font-weight: bold;
+    background-color: crimson;
+  }
+
+
+  .bet_label {
+    padding: 20px 0 8px;
+  }
+
+  input[type="text"] {
+    text-align: center;
+    font-weight: bolder;
+  }
+
+
+  .bet_number {
+    font-size: 20px;
+    width: 100px;
+  }
+}
+
+.point {
+  margin-top: 20px;
 }

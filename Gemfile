@@ -57,3 +57,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'slim-rails'
 gem 'active_hash'
+gem "jquery-rails"
+gem "jquery-turbolinks"

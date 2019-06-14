@@ -5,7 +5,8 @@ class DeviseCreateGroups < ActiveRecord::Migration[5.2]
     create_table :groups do |t|
       ## Database authenticatable
       t.string :group_name
-      t.integer :sum
+      t.integer :sum, default: 0
+      t.integer :point, default: 100
       t.string :encrypted_password, null: false, default: ""
 
       ## Recoverable

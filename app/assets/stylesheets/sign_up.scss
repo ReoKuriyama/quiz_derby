@@ -30,10 +30,12 @@
   .start_button {
     padding: 50px 20px 20px;
 
-    input[type="submit"] {
+    .join {
       color: white;
-      font-size: 15px;
+      font-size: 21px;
       font-weight: bold;
+      text-align: center;
+      box-shadow: #f2f52e 0px 0px 2px 0px;
     }
   }
 }

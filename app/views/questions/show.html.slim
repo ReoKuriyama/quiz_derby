@@ -2,24 +2,35 @@
   .wrap_small
     .question
       h1.title
-        = @question.text
+        |Q
+        = @question.id
 
     .group_select
       = form_with model: @score do |form| 
         = form.radio_button :bet_team, "1", id: 1
         = form.label :bet_team, 'グループ1', for: 1
+          span.btn-square-shadow グループ1
         = form.radio_button :bet_team, "2", id: 2
         = form.label :bet_team, "グループ2", for: 2
+          span.btn-square-shadow グループ2
         = form.radio_button :bet_team, "3", id: 3
         = form.label :bet_team, "グループ3", for: 3
+          span.btn-square-shadow グループ3
         = form.radio_button :bet_team, "4", id: 4
         = form.label :bet_team, "グループ4", for: 4
+          span.btn-square-shadow グループ4
         = form.radio_button :bet_team, "5", id: 5
         = form.label :bet_team, "グループ5", for: 5
+          span.btn-square-shadow グループ5
         = form.radio_button :bet_team, "6", id: 6
         = form.label :bet_team, "グループ6", for: 6
+          span.btn-square-shadow グループ6
 
-        p 投入ポイント
-        = form.text_field :bet
+        p.bet_label 投入ポイント
+        = form.text_field :bet, class: 'bet_number'
+        h2.point
+          |現在のポイント: 
+          = current_group.point
         = form.hidden_field :question_number
         = form.submit :投票する
+
